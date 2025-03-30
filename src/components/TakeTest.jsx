@@ -49,7 +49,7 @@ const TakeTest = () => {
     const score = calculateScore();
     saveResults(score);
     setSubmitted(true);
-    setTimeout(() => navigate(`/course/${courseId}/results`), 1500);
+    setTimeout(() => navigate(`/course/${courseId}/leaderboard`), 1500);
   };
 
   const handleSubmit = () => {
@@ -61,7 +61,7 @@ const TakeTest = () => {
     saveResults(score);
     setSubmitted(true);
     setConfirmationOpen(false);
-    setTimeout(() => navigate(`/course/${courseId}/results`), 1500);
+    setTimeout(() => navigate(`/course/${courseId}/leaderboard`), 1500);
   };
 
   const calculateScore = () => {
@@ -243,7 +243,7 @@ const TakeTest = () => {
               <FiCheck className="text-green-400 text-6xl mx-auto" />
             </div>
             <h2 className="text-2xl font-bold mb-4">Test Submitted Successfully!</h2>
-            <p className="text-gray-300">You'll be redirected to your results shortly...</p>
+            <p className="text-gray-300">You'll be redirected to the leaderboard shortly...</p>
           </div>
         )}
 
