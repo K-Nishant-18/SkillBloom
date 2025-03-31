@@ -17,14 +17,14 @@ import {
 
 const navItems = [
     {
+        name: "Space",
+        icon: Users,
+        href: "/community",
+    },
+    {
         name: "Courses",
         icon: Cpu,
         href: "/courses",
-    },
-    {
-        name: "Projects",
-        icon: Book,
-        href: "/projects",
     },
     {
         name: "Home",
@@ -32,9 +32,9 @@ const navItems = [
         href: "/",
     },
     {
-        name: "Community",
-        icon: Users,
-        href: "/community",
+        name: "Projects",
+        icon: Book,
+        href: "/projects",
     },
     {
         name: "Profile",
