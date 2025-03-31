@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
 import Home from "./Pages/Home.jsx";
@@ -10,8 +11,20 @@ import Leaderboard from './components/Leaderboard.jsx';
 import Login from './Pages/Login.jsx';
 import Footer from './components/Footer.jsx';
 import ManageCourse from './Pages/ManageCourse.jsx';
+import MobileNavigation from './components/MobileNavigation.jsx';
 
 function App() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <Router>
       <Navbar />
@@ -27,6 +40,7 @@ function App() {
         <Route path="/manage-course" element={<ManageCourse />} />
       </Routes>
       <Footer />
+      {isMobile && <MobileNavigation />}
     </Router>
   );
 }
