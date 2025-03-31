@@ -11,7 +11,7 @@ import Leaderboard from './components/Leaderboard.jsx';
 import Login from './Pages/Login.jsx';
 import Footer from './components/Footer.jsx';
 import ManageCourse from './Pages/ManageCourse.jsx';
-import MobileNavigation from './components/MobileNavigation.jsx';
+import MobileNavigation from './components/MObileNavigation.jsx';
 import ProjectPage from './Pages/ProjectPage.jsx';
 import CommunityPage from './Pages/CommunityPage.jsx';
 
