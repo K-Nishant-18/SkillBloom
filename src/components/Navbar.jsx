@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, useScroll, useSpring, AnimatePresence } from "framer-motion";
 import { Button } from "./ui/Button";
-import { FiMenu, FiX, FiUser, FiHome, FiBook, FiEdit, FiSettings } from "react-icons/fi";
+import { FiMenu, FiX, FiUser, FiHome, FiBook, FiEdit, FiSettings, FiUsers } from "react-icons/fi";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,6 +35,8 @@ const Navbar = () => {
     { path: "/", name: "Home", icon: <FiHome /> },
     { path: "/profile", name: "Profile", icon: <FiUser /> },
     { path: "/courses", name: "Courses", icon: <FiBook /> },
+    { path: "/projects", name: "Projects", icon: <FiBook /> },
+    { path: "/community", name: "Community", icon: <FiUsers /> },
     { path: "/test-dashboard", name: "Make Test", icon: <FiEdit /> },
     { path: "/manage-course", name: "Manage", icon: <FiSettings /> },
   ];

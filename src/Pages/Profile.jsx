@@ -37,7 +37,7 @@ const Profile = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-4 md:p-8 pt-20">
+    <div className="min-h-screen bg-gray-900 text-white p-4 md:p-8 pt-5 sm:pt-7 md:pt-8">
       <div className="max-w-6xl mx-auto pt-20">
         <motion.div
           initial="hidden"

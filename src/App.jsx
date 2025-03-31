@@ -12,6 +12,8 @@ import Login from './Pages/Login.jsx';
 import Footer from './components/Footer.jsx';
 import ManageCourse from './Pages/ManageCourse.jsx';
 import MobileNavigation from './components/MobileNavigation.jsx';
+import ProjectPage from './Pages/ProjectPage.jsx';
+import CommunityPage from './Pages/CommunityPage.jsx';
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -38,6 +40,8 @@ function App() {
         <Route path="/course/:courseId/leaderboard" element={<Leaderboard />} />
         <Route path="/login" element={<Login />} />
         <Route path="/manage-course" element={<ManageCourse />} />
+        <Route path="/projects" element={<ProjectPage />} />
+        <Route path="/community" element={<CommunityPage />} />
       </Routes>
       <Footer />
       {isMobile && <MobileNavigation />}

@@ -1,0 +1,23 @@
+{
+    "name": "SkillBloom+",
+    "short_name": "SkillBloom+",
+    "version": "1.0.0",
+    "description": "A fast and modern React app using Vite",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#317EFB",
+    "icons": [
+        {
+            "src": "SkillBloom+192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+          },
+          {
+            "src": "SkillBloom+512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+          }
+    ]
+  }
+  

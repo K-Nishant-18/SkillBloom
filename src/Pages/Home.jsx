@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from 'react';
 import { 
   FaCode, FaBook, FaUser, FaRocket, FaGlobe, FaLightbulb, 
@@ -46,7 +47,7 @@ const Home = () => {
   });
   
   const earthY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  const earthScale = useTransform(scrollYProgress, [0, 1], [1, 1.2]); // Reduced scale for mobile
+  const earthScale = useTransform(scrollYProgress, [0, 1], [1, 2.2]); // Reduced scale for mobile
   const earthOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0.3]);
 
   useEffect(() => {
@@ -172,21 +173,21 @@ const Home = () => {
   const testimonials = [
     {
       quote: "SkillBloom+ made learning fun with gamification—I’ve earned badges and a job referral!",
-      name: "Alex Chen",
+      name: "Gaurav Shaw",
       role: "Software Developer",
-      avatar: "/images/avatars/1.jpg"
+      avatar: "https://randomuser.me/api/portraits/men/20.jpg"
     },
     {
       quote: "The live portfolio got me noticed by recruiters after winning a skill competition.",
-      name: "Maria Rodriguez",
+      name: "Subham Bangal",
       role: "UX Designer",
-      avatar: "/images/avatars/2.jpg"
+      avatar: "https://randomuser.me/api/portraits/men/24.jpg"
     },
     {
       quote: "Mentoring others on SkillBloom+ earned me rewards and a global network!",
-      name: "James Wilson",
+      name: "Tripti Sharma",
       role: "Data Scientist",
-      avatar: "/images/avatars/3.jpg"
+      avatar: "https://randomuser.me/api/portraits/women/44.jpg"
     }
   ];
 
@@ -277,7 +278,7 @@ const Home = () => {
         <section className="min-h-screen flex items-center justify-center text-center px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
             <motion.h1 
-              className="text-[clamp(2.5rem,8vw,9rem)] font-bold mb-6 tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-400"
+              className="text-[clamp(2.5rem,13vw,9rem)] font-bold mb-6 tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-400"
               initial="hidden"
               animate="visible"
               variants={titleVariants}
@@ -300,8 +301,9 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.8 }}
             >
+              <Link to="/courses">
               <Button
-                className="relative overflow-hidden group bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium px-6 py-3 sm:px-8 sm:py-4 rounded-full shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 w-full sm:w-auto"
+                className="relative overflow-hidden group bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium px-6 py-3 sm:px-8 sm:py-4 rounded-full shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 w-3/4 sm:w-auto"
                 radius="full"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -309,15 +311,18 @@ const Home = () => {
                 <span className="relative z-10">Start Learning</span>
                 <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></span>
               </Button>
+              </Link>
               
+              <Link to="/courses">
               <Button
-                className="bg-transparent border-2 border-gray-600 text-gray-200 font-medium px-6 py-3 sm:px-8 sm:py-4 rounded-full hover:bg-gray-800/50 hover:border-gray-400 transition-all duration-300 w-full sm:w-auto"
+                className="bg-transparent border-2 border-gray-600 text-gray-200 font-medium px-6 py-3 sm:px-8 sm:py-4 rounded-full hover:bg-gray-800/50 hover:border-gray-400 transition-all duration-300 w-3/4 sm:w-auto"
                 radius="full"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 Explore Community
               </Button>
+              </Link>
             </motion.div>
 
             {/* Floating animated elements */}
